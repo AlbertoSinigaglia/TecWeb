@@ -2,9 +2,9 @@
 
 Appunti TecWeb per il progetto 
 
-## Header 
+## 1.1 Header 
 
-#### 1.1 DOCTYPE
+#### 1.1.1 DOCTYPE
 
 ```html
 // html5
@@ -16,13 +16,13 @@ Appunti TecWeb per il progetto
 ```
 :x: Se manca, il browser è libero di interpretare la pagina come meglio crede (come se ci son errori nella sintassi [[`Quirks Mode`](https://it.wikipedia.org/wiki/Quirks_Mode)])
 
-#### 1.2 Intestazione
+#### 1.1.2 Intestazione
 ```html
 <html xmlns="..." xml:lang="it" lang="it">
 ...
 ```
 
-#### Content type
+#### 1.1.3 Content type
 ```html
 <html>
   <head>
@@ -32,7 +32,7 @@ Appunti TecWeb per il progetto
     <meta charset="UTF-8">
 ...
 ```
-#### Link
+#### 1.1.4 Link
 definisce un collegamento ad una risorsa esterna (`href`, `rel`)
 ```html
 <html>
@@ -42,7 +42,7 @@ definisce un collegamento ad una risorsa esterna (`href`, `rel`)
 ...
 ```
 
-#### Base
+#### 1.1.5 Base
 definisce la posizione di base per i collegamenti
 ```html
 <html>
@@ -51,7 +51,7 @@ definisce la posizione di base per i collegamenti
 ...
 ```
 
-#### Meta
+#### 1.1.6 Meta
 suddivisi tra `http-equiv` (esempio `charset` o `refresh`) e `name` (`description`, `keywords`, `copyright`, `author`, `robots`, `rating`)
 ```html
 <html>
@@ -60,12 +60,12 @@ suddivisi tra `http-equiv` (esempio `charset` o `refresh`) e `name` (`descriptio
 ...
 ```
 
-## Body 
+## 1.2 Body 
 
-#### Attributi Core
+#### 1.2.1 Attributi Core
 Sono `class`, `id`, `title` (aggiunge informazioni a un elemento) e `style` (supportati da tutti i tag)
 
-#### Div
+#### 1.2.2 Div
 Elemento contenitore generico per l'associazione con fogli di stile e crea un nuovo blocco
 ```html
 <html>
@@ -77,7 +77,7 @@ Elemento contenitore generico per l'associazione con fogli di stile e crea un nu
 ```
 
 
-#### Span
+#### 1.2.3 Span
 Elemento con alcuna cratteristica se non di fare da supporto per stili o per dichiarare la presenza di vocaboli in altre lingue (elemento in linea)
 ```html
 <html>
@@ -88,7 +88,7 @@ Elemento con alcuna cratteristica se non di fare da supporto per stili o per dic
 ...
 ```
 
-#### P
+#### 1.2.4 P
 Elemento per l'inserimento di un paragrafo, per andare a capo si usa `<br/>`
 ```html
 <html>
@@ -99,7 +99,7 @@ Elemento per l'inserimento di un paragrafo, per andare a capo si usa `<br/>`
 ...
 ```
 
-#### Headers
+#### 1.2.5 Headers
 Elemento "gerarchico" per la definizione degli argomenti/topics principali
 ```html
 <html>
@@ -111,8 +111,8 @@ Elemento "gerarchico" per la definizione degli argomenti/topics principali
 ...
 ```
 
-#### Quote
+#### 1.2.6 Quote
 Si possono usare `quote` e `cite` per inserire citazioni 
 
-#### Pre
+#### 1.2.7 Pre
 Usato per l'inserimento di testo preformattato (non fa il trim degli spazi)
