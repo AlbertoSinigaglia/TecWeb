@@ -116,3 +116,164 @@ Si possono usare `quote` e `cite` per inserire citazioni
 
 #### 1.2.7 Pre
 Usato per l'inserimento di testo preformattato (non fa il trim degli spazi)
+
+#### 1.2.8 Elenchi non ordinati
+Elenchi puntati (`ul`)  da utilizzare quando vogliamo dei punti per il nostro elenco senza un ordine ben preciso.  
+Ogni elemento è un `li`
+```html
+<html>
+  ...
+  <body>
+    ...
+    <ul>
+      <li> entry 1 </li>
+      <li> entry 2 </li>
+    </ul>
+...
+```
+
+#### 1.2.8 Elenchi ordinati
+Elenchi puntati (`ol`)  da utilizzare quando vogliamo dei punti per il nostro elenco con un ordine ben preciso.  
+Ogni elemento è un `li`
+```html
+<html>
+  ...
+  <body>
+    ...
+    <ol>
+      <li> entry 1 </li>
+      <li> entry 2 </li>
+    </ol>
+...
+```
+
+#### 1.2.9 Elenchi di definizioni
+Elenchi in cui non si utilizza ancun tipo di punto, utili soprattutto per definire dei termini.
+`dl` è il tag generico, in cui `dt` è l'elemento da definire e `dd` la definizione.
+```html
+<html>
+  ...
+  <body>
+    ...
+    <dl>
+      <dt> termine </dt>
+      <dd> la definizione del termine </dd>
+    </dl>
+...
+```
+
+#### 1.2.10 Immagini
+il tag è `img` con possibili attributi:
+1. `alt` : testo alternativo (testo descrizione della foto da un punto di vista informativo/visivo)
+2. `longdesc` : URI a una pagina con una descrizione dell'immagine
+
+```html
+<html>
+  ...
+  <body>
+    ...
+    <img src="nome.png" alt="descrizione">
+...
+```
+
+#### 1.2.11 Link a
+il tag è `a` con possibili attributi:
+1. `href` : path a cui il link punta
+2. `target` : attributo per specificare se si vuole aprire una nuova finestra
+3. `title` : titolo del link che descrive la destinazione
+4. `download` : attributo per la dichiarazione che la destinazione è da scaricare
+5. `tabindex`, `accesskey` : indicano rispettivamente un carattere per portare il focus sul link e l'ordine di tabulazione (`accesskey` ha poco senso perchè ormai gli shortcut son già tutti occupati) 
+```html
+<html>
+  ...
+  <body>
+    ...
+    <a href="/altrapagina.php" target="_blank" title="titolo del link">
+...
+```
+
+#### 1.2.12 Tabelle
+il tag è `table` e supportano i seguenti tag:
+1. `tr`: riga
+2. `td`: elemento della riga
+3. `th`: elemento della riga dell'header
+4. `thead`: header della tabella
+5. `tfoot`: footer della tabella
+6. `tbody`: corpo della tabella
+7. `summary`: descrizione della tabella
+8. `caption`: didascalia della tabella
+
+```html
+<html>
+  ...
+  <body>
+    ...
+    <table>
+      <thead>
+        <tr>
+          <th> prima colonna </th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td> footer prima colonna </td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>valore prima riga prima colonna</td>
+        </tr>
+      </tbody>
+    </table>
+...
+```
+
+#### 1.2.13 Form
+Il tag è `form` e supporta i seguenti tag
+1. `action`: pagina cui puntata
+2. `method`: metodo da usare per la richiesta (`GET` o `POST`)
+3. `enctype="multipart/form-data"`: metodo di criptazione nel caso nel form ci siano `input` con `type="file"`
+Ogni elemento è un `li`
+```html
+<html>
+  ...
+  <body>
+    ...
+    <form action="registrati.php" method="post">
+      ...
+    </form>
+...
+```
+si usano inoltre i campi `fieldset` (e relativa `legend`) e `div` per il suo contenuto
+
+#### 1.2.14 Input, textarea
+ognuno di questi elementi in un form deve avere l'attributo `name` per la richiesta
+`input` può essere del tipo (`type`):
+1. `text`: con relativo `maxlength` per dichiarare la dimensione di testo massimo
+2. `password`: testo offuscato visivamente
+3. `checkbox`: on/of
+4. `radio`: "uno dei"
+5. `submit`: invio
+6. `reset`: reset del form
+7. `hidden`: campo nascosto
+8. `file`: per caricare un file
+9. `button`: bottone ma non per il submit
+10. `image`: come `button` ma con immagine
+Ogni elemento è un `li`
+```html
+<html>
+  ...
+  <body>
+    ...
+    <form action="registrati.php" method="post">
+      <fieldset>
+        <legend> Inserimento dati personali </legend>
+        <label for="campo_nome"> inserisci il tuo nome </label>
+        <input type="text" name="nome" id="campo_nome"> 
+        <label for="campo_storia"> inserisci la tua storia </label>
+        <textarea type="text" name="storia" id="campo_storia"> la mia lunghissima storia </textarea>
+      </fieldset>
+    </form>
+...
+```
+Gli si associa inoltre una `label` per associare il testo associato a un `input` (con l'attributo `for`)
