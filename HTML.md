@@ -1,8 +1,8 @@
-# 1. XHTML & HTML5
-
 Appunti TecWeb per il progetto 
 
-## 1.1 Header 
+# **1. XHTML**
+
+## **1.1 Header**
 
 #### 1.1.1 DOCTYPE
 
@@ -60,7 +60,7 @@ suddivisi tra `http-equiv` (esempio `charset` o `refresh`) e `name` (`descriptio
 ...
 ```
 
-## 1.2 Body 
+## **1.2 Body** 
 
 #### 1.2.1 Attributi Core
 Sono `class`, `id`, `title` (aggiunge informazioni a un elemento) e `style` (supportati da tutti i tag)
@@ -277,3 +277,97 @@ Ogni elemento è un `li`
 ...
 ```
 Gli si associa inoltre una `label` per associare il testo associato a un `input` (con l'attributo `for`)
+
+
+#### 1.2.15 Select
+Permette di creare un elenco di dati, che viene visualizzato come menù a tendina (può essere usato anche per la selezione multipla con tag `multiple`)
+```html
+<html>
+  ...
+  <body>
+    ...
+    <form action="registrati.php" method="post">
+      <fieldset>
+        <legend> legenda del settore del form </legend>
+        <label for="select_nome"> seleziona il tuo nome </label>
+        <select name="nome" id="select_nome">
+          <optgroup label="Primo gruppo">
+            <option value="1.1">prima scelta</option>
+            <option value="1.2">seconda scelta</option>
+          </optgroup>
+          <optgroup label="Secondo gruppo">
+            <option value="2.1">prima scelta</option>
+            <option value="2.2">seconda scelta</option>
+          </optgroup>
+        </select>
+      </fieldset>
+    </form>
+...
+```
+
+# **2. HTML5**
+
+## **2.1 Header**
+
+#### 2.1.1 Viewport
+impostare il rapporto di visualizzazione:
+```html
+<html>
+  <head>
+  ...
+    <meta name="viewport" content="width=device-width">
+    ...
+```
+può avere nel `content` anche:
+1. `initial-scale`
+2. `minimum-scale`
+3. `maximum-scale`
+4. `user-scalable`
+
+## **2.2 Body**
+
+#### 2.2.1 Canvas
+Area di disegno interativa
+
+#### 2.2.2 Audio e video
+Accesso e riproduzione di multimedia senza la necessità di plug-in
+
+#### 2.2.2 Nuovi tag alternativi a div
+HTML5 inserisce nuovi tag quali `section`, `article`, `header`, `footer`, `nav`, `aside`
+
+#### 2.2.2 Nuovi tag semantivi
+HTML5 inserisce nuovi tag semantici quali `time`, `figure`, `meter` (con attributi `max` e `min`), `progress`, `small`.  
+In particolare `datalist`:
+```html
+<html>
+  <head>
+  ...
+  </head>
+  <body>
+    <input list="lista">
+    <datalist id="lista">
+      <option value="valore1"> Valore 1 </option>
+      <option value="valore2"> Valore 2 </option>
+    </datalist>
+  </body>
+</html>
+```
+
+#### 2.2.3 Novità nei form
+si aggiunge l'attributo `target`, `autocomplete` e `novalidate`, mentre a `input` si aggiungono tipi quali:
+1. `number`
+2. `color`
+3. `email`, `url`, `tel`
+4. `search`
+5. `datetime`, `datetime-local`, `date`, `month`, `time`, `week`
+
+Vengono inoltre aggiunti attributi a `input` come 
+1. `required`
+2. `formnovalidate`
+3. `pattern`
+4. `placeholder`
+5. `autocomplete`
+6. `autofocus`
+7. `spellcheck`
+8. `multiple`
+9. `min`, `max`, `step`
